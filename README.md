@@ -9,7 +9,7 @@ sho515@g.skku.edu
 ## Education
 
 **Sungkyunkwan University**
-Industrial Engineering / Smart Manufacturing
+Industrial Engineering
 
 ---
 
@@ -31,10 +31,3 @@ Research project studying driver response to Takeover Request (TOR) alerts in au
 - Conducted ANOVA analysis on driver response data
 
 ---
-
-## Skills
-
-- **Programming / Tools:** Python, MATLAB
-- **Numerical Methods:** LU factorization, Gauss-Seidel, Runge-Kutta, FDM, FFT, interpolation
-- **Data Analysis:** ANOVA, statistical analysis
-- **Other:** GitHub (Seou-Web)
