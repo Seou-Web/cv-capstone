@@ -4,240 +4,282 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lee Seou — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#2B2733;
-    --purple:#6E4A8E;
-    --purple-deep:#4F3568;
-    --lavender:#F3EFF9;
-    --lavender-line:#D9CEEA;
-    --rule:#C9BBDD;
-    --gray:#6B6675;
-    --white:#FFFFFF;
-  }
-
-  @page{
-    margin:0;
-    size:Letter;
+    --ink:#10181F;
+    --paper:#EEF1F4;
+    --paper-line:#C9D2DA;
+    --steel:#3D5266;
+    --navy:#16263B;
+    --amber:#D97B29;
+    --amber-soft:#F1D9BE;
+    --white:#FCFCFB;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
 
+  html{scroll-behavior:smooth;}
+
   body{
-    font-family:'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background:var(--paper);
     color:var(--ink);
-    background:var(--white);
-    line-height:1.5;
+    font-family:'Inter', sans-serif;
+    line-height:1.55;
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 
-  a{color:var(--purple-deep);text-decoration:none;}
+  a{color:var(--navy);}
 
-  :focus-visible{outline:2px solid var(--purple); outline-offset:3px;}
+  :focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
 
   .sheet{
-    max-width:960px;
+    max-width:880px;
     margin:0 auto;
-    display:flex;
+    background:var(--white);
+    border:1px solid var(--paper-line);
+    box-shadow:0 1px 0 var(--paper-line);
     min-height:100vh;
   }
 
-  @media (max-width:760px){
-    .sheet{flex-direction:column;}
+  @media (max-width:900px){
+    .sheet{max-width:100%;}
   }
 
-  /* ---------------- SIDEBAR ---------------- */
-  .sidebar{
-    width:300px;
-    flex-shrink:0;
-    background:var(--lavender);
-    padding:40px 32px;
+  /* ---------- HEADER / TITLE BLOCK ---------- */
+  header{
+    padding:56px 56px 40px;
+    border-bottom:2px solid var(--ink);
+    position:relative;
   }
 
-  @media (max-width:760px){
-    .sidebar{width:100%;}
-  }
-
-  .name{
-    font-size:28px;
-    font-weight:700;
-    color:var(--purple-deep);
-    letter-spacing:-0.01em;
-  }
-
-  .name-sub{
-    font-size:14px;
-    color:var(--purple);
-    margin-top:4px;
-    font-weight:500;
-  }
-
-  .side-section{
-    margin-top:36px;
-  }
-
-  .side-title{
-    font-size:13px;
-    font-weight:700;
+  .doc-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
     text-transform:uppercase;
-    letter-spacing:0.06em;
-    color:var(--purple-deep);
-    border-bottom:1px solid var(--lavender-line);
-    padding-bottom:8px;
-    margin-bottom:14px;
+    color:var(--steel);
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:28px;
   }
 
-  .contact-line{
-    font-size:13.5px;
-    color:var(--gray);
-    margin-bottom:8px;
-    word-break:break-word;
+  h1{
+    font-family:'Archivo', sans-serif;
+    font-weight:800;
+    font-size:clamp(40px, 7vw, 64px);
+    letter-spacing:-0.01em;
+    line-height:1;
+    color:var(--navy);
   }
-  .contact-line a{color:var(--gray);}
-  .contact-line a:hover{color:var(--purple-deep);}
 
-  .skill-group{
-    margin-bottom:16px;
+  .role-line{
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    color:var(--amber);
+    margin-top:10px;
+    letter-spacing:0.02em;
   }
-  .skill-group:last-child{margin-bottom:0;}
 
-  .skill-group-label{
+  .contact-row{
+    margin-top:24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    font-size:14px;
+    color:var(--steel);
+  }
+
+  .contact-row a{
+    color:var(--steel);
+    text-decoration:none;
+    border-bottom:1px solid var(--paper-line);
+  }
+  .contact-row a:hover{
+    border-bottom-color:var(--amber);
+    color:var(--ink);
+  }
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+  section{
+    padding:40px 56px;
+    border-bottom:1px solid var(--paper-line);
+  }
+
+  section:last-of-type{border-bottom:none;}
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:28px;
+  }
+
+  .section-num{
+    font-family:'JetBrains Mono', monospace;
     font-size:12px;
-    color:var(--purple);
-    font-weight:600;
-    margin-bottom:8px;
+    color:var(--amber);
+    border:1px solid var(--amber-soft);
+    background:#FBF3E9;
+    padding:3px 8px;
+    border-radius:3px;
+  }
+
+  .section-title{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--navy);
+  }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-block{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .edu-name{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--ink);
+  }
+  .edu-field{
+    color:var(--steel);
+    font-size:15px;
+    margin-top:4px;
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .project{
+    border:1px solid var(--paper-line);
+    border-left:3px solid var(--navy);
+    padding:22px 26px;
+    margin-bottom:18px;
+    background:linear-gradient(180deg, #FFFFFF, #FBFCFC);
+  }
+  .project:last-child{margin-bottom:0;}
+
+  .project-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:6px;
+  }
+
+  .project-id{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--steel);
+    letter-spacing:0.08em;
+  }
+
+  .project-name{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:18px;
+    color:var(--navy);
+    flex:1 1 auto;
+    margin-right:12px;
+  }
+
+  .project-summary{
+    color:var(--steel);
+    font-size:14.5px;
+    margin-bottom:12px;
+  }
+
+  .project ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .project li{
+    font-size:14.5px;
+    padding-left:18px;
+    position:relative;
+    color:var(--ink);
+  }
+
+  .project li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--amber);
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:14px 18px;
+  }
+
+  @media (max-width:600px){
+    .skill-grid{grid-template-columns:1fr;}
+  }
+
+  .skill-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--steel);
+    padding-top:6px;
   }
 
   .chip-row{
     display:flex;
     flex-wrap:wrap;
-    gap:6px;
+    gap:8px;
   }
 
   .chip{
-    font-size:12.5px;
-    padding:4px 9px;
-    background:var(--white);
-    border:1px solid var(--lavender-line);
-    border-radius:12px;
-    color:var(--ink);
-  }
-
-  /* ---------------- MAIN COLUMN ---------------- */
-  .main{
-    flex:1;
-    padding:40px 44px 32px;
-    page-break-inside:auto;
-  }
-
-  .entry, .edu-entry{
-    page-break-inside:avoid;
-  }
-
-  .section{
-    margin-bottom:26px;
-  }
-  .section:last-child{margin-bottom:0;}
-
-  .section-title{
-    font-size:19px;
-    font-weight:700;
-    color:var(--purple-deep);
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:16px;
-  }
-
-  .section-title::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--rule);
-  }
-
-  .entry{
-    margin-bottom:16px;
-  }
-  .entry:last-child{margin-bottom:0;}
-
-  .entry-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-bottom:4px;
-  }
-
-  .entry-title{
-    font-size:16px;
-    font-weight:700;
-    color:var(--ink);
-  }
-
-  .entry-title .org{
-    font-weight:400;
-    color:var(--gray);
-  }
-
-  .entry-tag{
-    font-size:12px;
-    color:var(--purple);
-    font-weight:600;
-    white-space:nowrap;
-  }
-
-  .entry-desc{
-    font-size:13.5px;
-    color:var(--gray);
-    margin-bottom:6px;
-  }
-
-  .entry ul{
-    list-style:none;
-    padding-left:0;
-  }
-
-  .entry li{
-    font-size:13.5px;
-    color:var(--ink);
-    padding-left:16px;
-    position:relative;
-    margin-bottom:3px;
-  }
-
-  .entry li::before{
-    content:"•";
-    position:absolute;
-    left:0;
-    color:var(--purple);
-  }
-
-  .edu-entry{
-    margin-bottom:14px;
-  }
-  .edu-entry:last-child{margin-bottom:0;}
-
-  .edu-degree{
-    font-size:15.5px;
-    font-weight:700;
-    color:var(--ink);
-  }
-
-  .edu-meta{
+    font-family:'JetBrains Mono', monospace;
     font-size:13px;
-    color:var(--gray);
-    margin-top:2px;
+    padding:5px 10px;
+    border:1px solid var(--paper-line);
+    border-radius:3px;
+    background:var(--paper);
+    color:var(--ink);
   }
 
+  /* ---------- FOOTER ---------- */
   footer{
-    margin-top:40px;
-    font-size:12px;
-    color:var(--gray);
+    padding:32px 56px 48px;
     display:flex;
     justify-content:space-between;
+    align-items:center;
     flex-wrap:wrap;
-    gap:8px;
+    gap:12px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--steel);
+  }
+
+  footer a{
+    color:var(--navy);
+    text-decoration:none;
+    border-bottom:1px solid var(--paper-line);
+  }
+  footer a:hover{border-bottom-color:var(--amber);}
+
+  @media (max-width:600px){
+    header, section, footer{padding-left:24px; padding-right:24px;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -249,106 +291,110 @@
 
 <div class="sheet">
 
-  <aside class="sidebar">
-    <div class="name">Lee Seou</div>
-    <div class="name-sub">Industrial Engineering</div>
-
-    <div class="side-section">
-      <div class="side-title">Contact</div>
-      <div class="contact-line"><a href="mailto:sho515@g.skku.edu">sho515@g.skku.edu</a></div>
-      <div class="contact-line">Sungkyunkwan University</div>
-      <div class="contact-line"><a href="https://github.com/Seou-Web" target="_blank" rel="noopener">github.com/Seou-Web</a></div>
+  <header>
+    <div class="doc-tag">
+      <span>DOC — CV / CAPSTONE SUBMISSION</span>
+      <span>REV. 2026</span>
     </div>
+    <h1>Lee Seou</h1>
+    <div class="role-line">INDUSTRIAL ENGINEERING</div>
+    <div class="contact-row">
+      <a href="mailto:sho515@g.skku.edu">sho515@g.skku.edu</a>
+      <span>Sungkyunkwan University</span>
+      <a href="https://github.com/Seou-Web" target="_blank" rel="noopener">github.com/Seou-Web</a>
+    </div>
+  </header>
 
-    <div class="side-section">
-      <div class="side-title">Skills</div>
-
-      <div class="skill-group">
-        <div class="skill-group-label">Tools</div>
-        <div class="chip-row">
-          <span class="chip">Python</span>
-          <span class="chip">MATLAB</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-label">Numerical Methods</div>
-        <div class="chip-row">
-          <span class="chip">LU Factorization</span>
-          <span class="chip">Gauss-Seidel</span>
-          <span class="chip">Runge-Kutta</span>
-          <span class="chip">FDM</span>
-          <span class="chip">FFT</span>
-          <span class="chip">Interpolation</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-label">Data Analysis</div>
-        <div class="chip-row">
-          <span class="chip">ANOVA</span>
-          <span class="chip">Statistical Analysis</span>
-        </div>
+  <section>
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">Education</span>
+    </div>
+    <div class="edu-block">
+      <div>
+        <div class="edu-name">Sungkyunkwan University (SKKU)</div>
+        <div class="edu-field">Industrial Engineering</div>
       </div>
     </div>
-  </aside>
+  </section>
 
-  <main class="main">
-
-    <div class="section">
-      <div class="section-title">Capstone Projects</div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">Cosmetic Manufacturing Emulsion Simulator</span>
-          <span class="entry-tag">PBM / Quality Prediction</span>
-        </div>
-        <div class="entry-desc">Population Balance Model (PBM)-based droplet distribution and quality prediction for emulsion manufacturing.</div>
-        <ul>
-          <li>Responsible for results analysis and project management</li>
-          <li>Analyzed droplet size distribution data to evaluate emulsion quality and predict manufacturing outcomes</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">Drone Battery Replacement Station Optimization</span>
-          <span class="entry-tag">M/M/c Queueing / MATLAB</span>
-        </div>
-        <div class="entry-desc">Capstone project applying M/M/c queueing theory to optimize drone battery replacement station design.</div>
-        <ul>
-          <li>Built the MATLAB model for the queueing system</li>
-          <li>Analyzed system performance under varying station and server configurations</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">Autonomous Vehicle TOR Alert Design</span>
-          <span class="entry-tag">Human Factors / Team 차오름</span>
-        </div>
-        <div class="entry-desc">Research project studying driver response to Takeover Request (TOR) alerts in autonomous vehicles.</div>
-        <ul>
-          <li>Designed and ran experiments comparing visual and auditory alert conditions using the Maze platform</li>
-          <li>Conducted ANOVA analysis on driver response data</li>
-        </ul>
-      </div>
+  <section>
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">Capstone Projects</span>
     </div>
 
-    <div class="section">
-      <div class="section-title">Education</div>
-      <div class="edu-entry">
-        <div class="edu-degree">B.S. in Industrial Engineering — Sungkyunkwan University</div>
-        <div class="edu-meta">2025.03 ~ Present</div>
+    <div class="project">
+      <div class="project-meta">
+        <span class="project-name">Cosmetic Manufacturing Emulsion Simulator</span>
+        <span class="project-id">PBM / QUALITY PREDICTION</span>
       </div>
+      <div class="project-summary">Population Balance Model (PBM)-based droplet distribution and quality prediction for emulsion manufacturing.</div>
+      <ul>
+        <li>Responsible for results analysis and project management</li>
+        <li>Analyzed droplet size distribution data to evaluate emulsion quality and predict manufacturing outcomes</li>
+      </ul>
     </div>
 
-    <footer>
-      <span>Lee Seou — Capstone CV</span>
-      <a href="https://github.com/Seou-Web/cv-capstone" target="_blank" rel="noopener">View repository ↗</a>
-    </footer>
+    <div class="project">
+      <div class="project-meta">
+        <span class="project-name">Drone Battery Replacement Station Optimization</span>
+        <span class="project-id">M/M/C QUEUEING / MATLAB</span>
+      </div>
+      <div class="project-summary">Capstone project applying M/M/c queueing theory to optimize drone battery replacement station design.</div>
+      <ul>
+        <li>Built the MATLAB model for the queueing system</li>
+        <li>Analyzed system performance under varying station and server configurations</li>
+      </ul>
+    </div>
 
-  </main>
+    <div class="project">
+      <div class="project-meta">
+        <span class="project-name">Autonomous Vehicle TOR Alert Design</span>
+        <span class="project-id">HUMAN FACTORS / TEAM 차오름</span>
+      </div>
+      <div class="project-summary">Research project studying driver response to Takeover Request (TOR) alerts in autonomous vehicles.</div>
+      <ul>
+        <li>Designed and ran experiments comparing visual and auditory alert conditions using the Maze platform</li>
+        <li>Conducted ANOVA analysis on driver response data</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">Skills</span>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-label">Tools</div>
+      <div class="chip-row">
+        <span class="chip">Python</span>
+        <span class="chip">MATLAB</span>
+      </div>
+
+      <div class="skill-label">Numerical Methods</div>
+      <div class="chip-row">
+        <span class="chip">LU Factorization</span>
+        <span class="chip">Gauss-Seidel</span>
+        <span class="chip">Runge-Kutta</span>
+        <span class="chip">FDM</span>
+        <span class="chip">FFT</span>
+        <span class="chip">Interpolation</span>
+      </div>
+
+      <div class="skill-label">Data Analysis</div>
+      <div class="chip-row">
+        <span class="chip">ANOVA</span>
+        <span class="chip">Statistical Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Lee Seou — Capstone CV</span>
+    <a href="https://github.com/Seou-Web/cv-capstone" target="_blank" rel="noopener">View repository ↗</a>
+  </footer>
 
 </div>
 
