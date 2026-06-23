@@ -43,6 +43,10 @@ Developed a Population Balance Model (PBM)-based simulator with multiple quality
 
 ## Research Papers
 
+### Team Capstone Manuscript (Submitted, double-blind review)
+**Scale-Up Simulation of Cosmetic Emulsion Manufacturing Vessels (100/300/500 L) Using a Population Balance Model: Integrated Multi-Metric Analysis of Droplet Size Distribution, Uniformity, Viscosity, and Hardness**
+Jeong Jongpil, Yoo Jaekyung, Kang Mingyu, **Lee Seou**, Lee Hakseung — manuscript prepared from the capstone project results (2026).
+
 ### Individual Target Paper Review (Mar. 2026)
 **CFD simulation of a Rushton turbine stirred-tank using open-source software with critical evaluation of MRF-based rotation modeling**
 Reid, A., Rossi, R., Cottini, C., Benassi, A. — *Meccanica* (Springer), 2025, pp. 1613–1637.
