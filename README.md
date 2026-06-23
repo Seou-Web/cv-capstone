@@ -37,7 +37,8 @@ Developed a Population Balance Model (PBM)-based simulator with multiple quality
 **CEVSim (Cosmetic Emulsification Vessel Scale-Up Simulator)**
 - Type: Computer Program Work — Application Software, Industrial S/W
 - Authors: Jeong Jongpil, Yoo Jaekyung, Kang Mingyu, **Lee Seou**, Lee Hakseung
-- Registration No.: C-2026-030853 · Status: Registered (created May 29, 2026)
+- Registration No.: C-2026-030863 · Accession No.: 2026-032760
+- Status: Registered June 23, 2026 (created May 29, 2026)
 
 ---
 
