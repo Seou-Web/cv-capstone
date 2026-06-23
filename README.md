@@ -23,20 +23,6 @@ Developed a Population Balance Model (PBM)-based simulator with multiple quality
 - Analyzed droplet size distribution data to evaluate emulsion quality and predict manufacturing outcomes
 - Project outcomes resulted in a pending patent application and a registered software work (see *Research Outcomes* below)
 
-### Drone Battery Replacement Station Optimization
-*M/M/c Queueing / MATLAB*
-
-Capstone project applying M/M/c queueing theory to optimize drone battery replacement station design.
-- Built the MATLAB model for the queueing system
-- Analyzed system performance under varying station and server configurations
-
-### Autonomous Vehicle TOR Alert Design
-*Human Factors / Team 차오름*
-
-Research project studying driver response to Takeover Request (TOR) alerts in autonomous vehicles.
-- Designed and ran experiments comparing visual and auditory alert conditions using the Maze platform
-- Conducted ANOVA analysis on driver response data
-
 ---
 
 ## Research Outcomes
